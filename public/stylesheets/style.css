@@ -6,3 +6,106 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+
+/*-------------ACCORDION---------------*/
+.accordion {
+  width: 100%;
+  margin: auto;
+  text-align: start;
+  display:grid;
+  ul{
+    list-style: none;
+    font-weight: 700;
+  }
+  a{
+    text-decoration: none;  /*Remove  underline for text*/
+      color: inherit;   /*make blue text color to original color */
+      
+    }
+}
+.accordion-content{
+  padding-top: 0px;
+  li{
+      padding-bottom:10px;
+  }
+}
+.accordion-item { /*Space between the list*/
+  margin-bottom: 5px;
+}
+
+.accordion-button {  /*style*/
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  background-color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 1.5em;
+}
+.accordion-button:hover{  /*Hover*/
+  background-color: lightgray;
+  color: black;
+  border: none;
+}
+.accordion-content { /*accordion display off*/
+  display: none;
+  padding: 15px;
+ }
+
+ .accordion-item.active .accordion-content {
+  /*Accordion list can open*/
+  display: block;
+}
+
+/*RESPONSIVE */
+@media (min-width: 768px) {  
+  .accordion-head {
+      pointer-events: none;   /* keep open the accordion and disable the button */
+  }
+ 
+  .accordion-item .accordion-content {
+      display: block; /*Accordion list keep opened*/
+  }
+ 
+  .accordion-button:hover{ /*remove the button hover*/
+      transform: none;
+      background-color: black;
+      color:white;
+  }
+  .accordion-button{ /*change the button to non style*/
+      padding-top: 20px;
+      padding-left: 50px;
+      border:none;
+  }
+   
+  .accordion{  /*Accordion layoout to be wide*/
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.social-media{
+  text-align: center;
+}
+.social-media-items{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  div{
+    padding-right:20px;
+  }
+}
+
+.footer-bottom{
+  display:flex;
+  flex-direction:row;
+  justify-content:end;
+  align-items: center;
+}
+.copyright{
+  margin-right:auto;
+  
+}
