@@ -57,7 +57,7 @@ body {
 
 /* Dropdown styles */
 .dropdown {
-  position: relative; /* Position relative to the dropdown container */
+  position: relative; 
   margin: 0;
   padding: 0;
 }
@@ -161,28 +161,24 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Ensure the navigation container does not shrink on smaller screens */
   .navContainer {
-    width: 100%; /* Ensure the container takes up full width */
-    flex-shrink: 0; /* Prevent shrinking */
+    width: 100%; 
+    flex-shrink: 0; 
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
   }
 
-  /* Adjust logo size */
   .logoIcon {
-    max-width: 120px; /* Slightly smaller on mobile */
+    max-width: 120px; 
     height: 45px;
   }
 
-  /* Adjust the search bar to fit better */
   .search {
-    width: 40%; /* Search takes less width on mobile */
+    width: 40%; 
     margin-left: auto;
   }
 
-  /* Make dropdown button smaller for mobile */
   .dropdownButton {
     font-size: 25px;
     padding-left: 0px;
@@ -199,36 +195,33 @@ body {
     top: 50px;
   }
 
-
-  /* Adjust checkout button sizes */
   .checkoutButton {
-    width: 40px; /* Make buttons a little smaller */
+    width: 40px; 
     height: 40px;
   }
 
-  /* Use flex-wrap to prevent overflow and keep the buttons and items properly aligned */
+
   .navTop {
-    flex-wrap: nowrap; /* Ensure items stay in one row */
+    flex-wrap: nowrap; 
     justify-content: space-between;
     padding: 10px;
     padding-left: 0;
   }
 
-  /* Prevent any overflow issues */
   .buttons {
-    gap: 10px; /* Reduced gap */
-    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px; 
+    justify-content: flex-end; 
   }
 }
 
 @media (max-width: 380px) {
-  /* Keep the nav items horizontal */
+  
   .navTop {
-    display: flex; /* Keep items in a row */
+    display: flex; 
     align-items: center;
     justify-content: space-between;
-    gap: 10px; /* Reduce the gap between items */
-    padding: 10px; /* Reduce padding for more space */
+    gap: 10px; 
+    padding: 10px; 
     padding-left: 0px;
   }
 
@@ -236,27 +229,25 @@ body {
     top: 43px;
   }
 
-  /* Further reduce the logo size */
   .logoIcon {
-    max-width: 100px; /* Smaller logo for very small devices */
+    max-width: 100px; 
     padding-left: 10px;
     
   }
 
-  /* Reduce the search bar size */
   .search {
-    width: 50%; /* Make search bar narrower */
-    padding: 5px 10px; /* Smaller padding */
-    gap: 3px; /* Reduced space between input and icon */
+    width: 50%; 
+    padding: 5px 10px;
+    gap: 3px; 
   }
 
   .searchInput {
-    font-size: 14px; /* Smaller font size for the search input */
+    font-size: 14px; 
   }
 
-  /* Reduce the size of the dropdown button */
+ 
   .dropdownButton {
-    font-size: 15px; /* Smaller font size */
+    font-size: 15px; 
     padding: 0;
     border-radius: 1px;
     margin-right: 5px;
@@ -264,24 +255,24 @@ body {
 
   /* Reduce button sizes */
   .checkoutButton {
-    width: 35px; /* Smaller button */
+    width: 35px; 
     height: 35px;
-    padding: 5px; /* Reduced padding */
+    padding: 5px; 
   }
 
-  /* Reduce the size of button icons */
+  
   .buttonIcon {
-    width: 18px; /* Smaller icons */
+    width: 18px; 
     height: 18px;
   }
 
-  /* Adjust button alignment */
+  
   .buttons {
-    gap: 8px; /* Reduce gap between buttons */
-    justify-content: center; /* Center the buttons */
+    gap: 8px; 
+    justify-content: center; 
   }
 
-  /* Ensure the nav container has some padding but not too much */
+ 
   .navContainer {
     padding-left: 5px;
     padding-right: 5px;
