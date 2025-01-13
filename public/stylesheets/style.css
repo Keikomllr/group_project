@@ -1,8 +1,289 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/* Navigation container */
+.navContainer {
+  border: solid 2px #cb9483;  
+  background-color: #000;
+  color: white;
+  width: 100%;
+}
+
+/* Navigation top (flex layout for alignment) */
+.navTop {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  gap: 20px; 
+  padding: 20px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  
+}
+
+/* Logo */
+.logoIcon {
+  margin-left: -20px;
+  width: auto;
+}
+
+/* Search input (Desktop) */
+.search {
+  display: flex; /* Ensure it's displayed on desktop */
+  align-items: center;
+  gap: 3px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #cb9483;
+  margin-left: auto;
+  width: 20%;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Search button (Mobile) */
+.searchButton {
+  display: none;  /* Hide on desktop */
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative; /* Position relative to the dropdown container */
+  margin: 0;
+  padding: 0;
+}
+
+.dropdownButton {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Hover effect */
+.dropdownButton:hover {
+  background-color: #cb9483;
+  color: black;
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #000;
+  color: white;
+  border: solid;
+  border-radius: 7px;
+  border-color: #cb9483;
+  top: 67px;
+  left: -15px;
+  width: 200px;
+  z-index: 100;
+}
+
+.dropdownMenu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  text-align: left;
+}
+
+.dropdownMenu a:hover {
+  background-color: #cb9483;
+}
+
+.dropdownMenu {
+  display: none;
+}
+
+/* Show the dropdown menu when active */
+.dropdownMenu.active {
+  display: block;
+}
+
+/* Checkout buttons */
+.buttons {
+  display: flex;
+  gap: 30px;
+  margin-right: 0;
+}
+
+.checkoutButton {
+  background-color: #cb9483;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background-color: #a4796a;
+}
+
+.buttonIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.basket {
+  background-color: #f1c8d1; 
+}
+
+.heart {
+  background-color: #f1c8d1; 
+}
+
+@media (max-width: 768px) {
+  /* Ensure the navigation container does not shrink on smaller screens */
+  .navContainer {
+    width: 100%; /* Ensure the container takes up full width */
+    flex-shrink: 0; /* Prevent shrinking */
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Adjust logo size */
+  .logoIcon {
+    max-width: 120px; /* Slightly smaller on mobile */
+    height: 45px;
+  }
+
+  /* Adjust the search bar to fit better */
+  .search {
+    width: 40%; /* Search takes less width on mobile */
+    margin-left: auto;
+  }
+
+  /* Make dropdown button smaller for mobile */
+  .dropdownButton {
+    font-size: 25px;
+    padding-left: 0px;
+    padding-right: 5px;
+    border-radius: 2px;
+  }
+
+  .dropdownMenu a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .dropdownMenu {
+    top: 50px;
+  }
+
+
+  /* Adjust checkout button sizes */
+  .checkoutButton {
+    width: 40px; /* Make buttons a little smaller */
+    height: 40px;
+  }
+
+  /* Use flex-wrap to prevent overflow and keep the buttons and items properly aligned */
+  .navTop {
+    flex-wrap: nowrap; /* Ensure items stay in one row */
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 0;
+  }
+
+  /* Prevent any overflow issues */
+  .buttons {
+    gap: 10px; /* Reduced gap */
+    justify-content: flex-end; /* Align buttons to the right */
+  }
+}
+
+@media (max-width: 380px) {
+  /* Keep the nav items horizontal */
+  .navTop {
+    display: flex; /* Keep items in a row */
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Reduce the gap between items */
+    padding: 10px; /* Reduce padding for more space */
+    padding-left: 0px;
+  }
+
+  .dropdownMenu {
+    top: 43px;
+  }
+
+  /* Further reduce the logo size */
+  .logoIcon {
+    max-width: 100px; /* Smaller logo for very small devices */
+    padding-left: 10px;
+    
+  }
+
+  /* Reduce the search bar size */
+  .search {
+    width: 50%; /* Make search bar narrower */
+    padding: 5px 10px; /* Smaller padding */
+    gap: 3px; /* Reduced space between input and icon */
+  }
+
+  .searchInput {
+    font-size: 14px; /* Smaller font size for the search input */
+  }
+
+  /* Reduce the size of the dropdown button */
+  .dropdownButton {
+    font-size: 15px; /* Smaller font size */
+    padding: 0;
+    border-radius: 1px;
+    margin-right: 5px;
+  }
+
+  /* Reduce button sizes */
+  .checkoutButton {
+    width: 35px; /* Smaller button */
+    height: 35px;
+    padding: 5px; /* Reduced padding */
+  }
+
+  /* Reduce the size of button icons */
+  .buttonIcon {
+    width: 18px; /* Smaller icons */
+    height: 18px;
+  }
+
+  /* Adjust button alignment */
+  .buttons {
+    gap: 8px; /* Reduce gap between buttons */
+    justify-content: center; /* Center the buttons */
+  }
+
+  /* Ensure the nav container has some padding but not too much */
+  .navContainer {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
