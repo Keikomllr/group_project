@@ -352,12 +352,13 @@ body {
   color: black;
   border: none;
 }
-.accordion-content { 
+.accordion-content { /*accordion display off*/
+  display: none;
   padding: 15px;
  }
 
  .accordion-item.active .accordion-content {
-  display: block;
+  display: block; /*Accordion list can open*/
 }
 
 /*RESPONSIVE */
