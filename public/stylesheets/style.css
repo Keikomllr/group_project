@@ -358,3 +358,131 @@ body {
     gap: 18px;
   }
 }
+
+/*-----Delivery and Safety with Icons------------*/
+.deliverySafety > ul {
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.deliverySafety_list{
+  position:relative;
+}
+.deliverySafety_text{
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  color: #cb9483;
+  position:absolute;
+  bottom:35px;
+  left: 90px;
+}
+.deliverySafety li{
+  padding:10px; 
+}
+
+@media (min-width: 768px){
+  .deliverySafety > ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 100px;
+    
+  }
+}
+
+/*-------------ACCORDION---------------*/
+.accordion {
+  width: 100%;
+  margin: auto;
+  text-align: start;
+  display:grid;
+  ul{
+    list-style: none;
+    font-weight: 700;
+  }
+  a{
+    text-decoration: none;  
+      color: inherit;   
+    }
+}
+.accordion-content{
+  padding-top: 0px;
+  li{
+      padding-bottom:10px;
+  }
+}
+.accordion-item { 
+  margin-bottom: 5px;
+}
+
+.accordion-button {  
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  background-color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 1.5em;
+}
+.accordion-button:hover{  
+  background-color: lightgray;
+  color: black;
+  border: none;
+}
+.accordion-content { /*accordion display off*/
+  display: none;
+  padding: 15px;
+ }
+
+ .accordion-item.active .accordion-content {
+  display: block; /*Accordion list can open*/
+}
+
+/*RESPONSIVE */
+@media (min-width: 768px) {  
+  .accordion-head {
+      pointer-events: none;   
+  } 
+  .accordion-item .accordion-content {
+      display: block; 
+  }
+  .accordion-button:hover{ 
+      transform: none;
+      background-color: black;
+      color:white;
+  }
+  .accordion-button{ 
+      padding-top: 20px;
+      padding-left: 50px;
+      border:none;
+  }  
+  .accordion{ 
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*--Social Media--*/
+.social-media{
+  text-align: center;
+}
+.social-media-items{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  div{
+    padding-right:20px;
+  }
+}
+
+.footer-bottom{
+  display:flex;
+  flex-direction:row;
+  justify-content:end;
+  align-items: center;
+}
+.copyright{
+  margin-right:auto;
+  
+}

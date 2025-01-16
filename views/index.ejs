@@ -6,6 +6,7 @@
     <title>Harmony</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="/stylesheets/javamain.js" defer></script>
+    <script src="/stylesheets/footerAccordion.js" defer></script>
   </head>
   <body>
     <nav>
@@ -68,5 +69,103 @@
       </div>
      
     </div>
+
+    <!--Delivery and safety info with Icons-->
+    <section class="deliverySafety">                   
+      <ul>
+        <li  class="deliverySafety_list">
+          <img src="../img/fast-delivery.png" width="70px" alt="fast-delivery">
+          <span class="deliverySafety_text">Express Delivery</span>
+          </li> 
+          <li class="deliverySafety_list">
+              <img src="../img/global.png" width="60px" alt="global">
+              <span class="deliverySafety_text">Global Shipping</span>
+          </li> 
+          <li  class="deliverySafety_list">
+              <img src="../img/safety.png" width="60px" alt="safety">
+              <span  class="deliverySafety_text">Safe Payments</span>
+          </li> 
+      </ul>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+      <!--Accordion Komponent-->
+      <div class="accordion">
+          <div class="accordion-item" >
+            <button class="accordion-button">Customer service</button>
+              <div class="accordion-content">
+                <ul>
+                  <a href="#" class="footerLink"><li>Contact us</li></a>
+                  <a href="#" class="footerLink"><li>Express Delivery</li></a>
+                  <a href="#" class="footerLink"><li>My page</li></a>
+                  <a href="#" class="footerLink"><li>Harmony Privacy Policy</li></a>
+                </ul>
+              </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-button" >Information</button>
+              <div class="accordion-content">
+                <ul>
+                  <a href="#" class="footerLink"><li>Privacy Notice</li></a>
+                  <a href="#" class="footerLink"><li>About Harmony</li></a>
+                  <a href="#" class="footerLink"><li>Return Policy</li></a>
+                </ul>
+              </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-button" >News and offers</button>
+              <div class="accordion-content">
+                <ul>
+                  <li>Join our customer club and sign up to receive our newsletters and SMS to make sure you don't miss any offers or promotions!</li>
+                  <br>
+                  <li>
+                    <input type="text" id="email" name="email" value="" placeholder="Email">
+                  </li>
+                  <li class="signUp-btn">  <!--SUBMIT-->
+                    <input type="submit" name="btn_confirm" value="SIGN UP">
+                  </li>  
+                </ul>
+              </div>
+          </div>
+      </div>
+      <!-- Social Media Links -->
+    <section class="social-media">
+      <h3>Follow us</h3>
+        <div class="social-media-items"> 
+          <div>
+            <a href="https://instagram.com/harmony" target="_blank"><img src="../img/instagram.png" alt="instagram" width="30" height="30" ></a>
+          </div>
+          <div>
+            <a href="https://x.com/harmony" target="_blank"><img src="../img/x.png" alt="x" width="30" height="30"></a>
+          </div>
+          <div> 
+            <a href="https://facebook.com/harmony" target="_blank"><img src="../img/facebook.png" alt="facebook" width="30" height="30"></a>
+          </div>
+        </div>  
+     </section>
+   <hr>
+    <!-- Copyright -->
+      <section class="footer-bottom">
+        <div class="copyright">
+          <p>Copyright © 2025 Harmony. All rights reserved.</p>
+        </div>   
+        <div class="paymentMethod">
+          <img src="../img/visa.png" alt="visa">
+        </div>
+        <div class="paymentMethod">
+          <img src="../img/master.png" alt="master">
+        </div>
+        <div class="paymentMethod">
+          <img src="../img/paypal.png" alt="paypal">
+        </div>
+        <div class="paymentMethod">
+          <img src="../img/klarna.png" width="35px" alt="klarna">
+        </div>
+        <div class="paymentMethod">
+          <img src="../img/swish.jpg" width="40px" alt="swish">
+        </div>
+      </section>
+    </footer>  
   </body>
 </html>
