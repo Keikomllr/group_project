@@ -1,12 +1,288 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
 .hero {
   display: flex;
   justify-content: space-around;
   gap: 18px;
+  
+/* Navigation container */
+.navContainer {
+  border: solid 2px #cb9483;  
+  background-color: #000;
+  color: white;
+  width: 100%;
+}
+
+/* Navigation top (flex layout for alignment) */
+.navTop {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  gap: 20px; 
+  padding: 20px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  
+}
+
+/* Logo */
+.logoIcon {
+  margin-left: -20px;
+  width: auto;
+}
+
+/* Search input (Desktop) */
+.search {
+  display: flex; /* Ensure it's displayed on desktop */
+  align-items: center;
+  gap: 3px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #cb9483;
+  margin-left: auto;
+  width: 20%;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Search button (Mobile) */
+.searchButton {
+  display: none;  /* Hide on desktop */
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative; 
+  margin: 0;
+  padding: 0;
+}
+
+.dropdownButton {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Hover effect */
+.dropdownButton:hover {
+  background-color: #cb9483;
+  color: black;
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #000;
+  color: white;
+  border: solid;
+  border-radius: 7px;
+  border-color: #cb9483;
+  top: 67px;
+  left: -15px;
+  width: 200px;
+  z-index: 100;
+}
+
+.dropdownMenu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  text-align: left;
+}
+
+.dropdownMenu a:hover {
+  background-color: #cb9483;
+}
+
+.dropdownMenu {
+  display: none;
+}
+
+/* Show the dropdown menu when active */
+.dropdownMenu.active {
+  display: block;
+}
+
+/* Checkout buttons */
+.buttons {
+  display: flex;
+  gap: 30px;
+  margin-right: 0;
+}
+
+.checkoutButton {
+  background-color: #cb9483;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background-color: #a4796a;
+}
+
+.buttonIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.basket {
+  background-color: #f1c8d1; 
+}
+
+.heart {
+  background-color: #f1c8d1; 
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    width: 100%; 
+    flex-shrink: 0; 
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  .logoIcon {
+    max-width: 120px; 
+    height: 45px;
+  }
+
+  .search {
+    width: 40%; 
+    margin-left: auto;
+  }
+
+  .dropdownButton {
+    font-size: 25px;
+    padding-left: 0px;
+    padding-right: 5px;
+    border-radius: 2px;
+  }
+
+  .dropdownMenu a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .dropdownMenu {
+    top: 50px;
+  }
+
+  .checkoutButton {
+    width: 40px; 
+    height: 40px;
+  }
+
+
+  .navTop {
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 0;
+  }
+
+  .buttons {
+    gap: 10px; 
+    justify-content: flex-end; 
+  }
+}
+
+@media (max-width: 380px) {
+  
+  .navTop {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; 
+    padding: 10px; 
+    padding-left: 0px;
+  }
+
+  .dropdownMenu {
+    top: 43px;
+  }
+
+  .logoIcon {
+    max-width: 100px; 
+    padding-left: 10px;
+    
+  }
+
+  .search {
+    width: 50%; 
+    padding: 5px 10px;
+    gap: 3px; 
+  }
+
+  .searchInput {
+    font-size: 14px; 
+  }
+
+ 
+  .dropdownButton {
+    font-size: 15px; 
+    padding: 0;
+    border-radius: 1px;
+    margin-right: 5px;
+  }
+
+  /* Reduce button sizes */
+  .checkoutButton {
+    width: 35px; 
+    height: 35px;
+    padding: 5px; 
+  }
+
+  
+  .buttonIcon {
+    width: 18px; 
+    height: 18px;
+  }
+
+  
+  .buttons {
+    gap: 8px; 
+    justify-content: center; 
+  }
+
+ 
+  .navContainer {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
 }
 
 .heroimg1 {

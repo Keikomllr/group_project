@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harmony</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/stylesheets/javamain.js" defer></script>
   </head>
   <body>
-    <div class="hero">
+    <nav>
+      <div class="navContainer">
+        <div class="navTop">
+          <!-- Dropdown Button -->
+          <div class="dropdown">
+            <button class="dropdownButton">☰</button> <!-- Hamburger Icon -->
+            <div class="dropdownMenu">
+              <a href="#">Perfumes</a>
+              <a href="#">Skincare</a>
+              <a href="#">Hair Products</a>
+              <a href="#">K-Beauty Products</a>
+              <a href="#">Men's Grooming</a>
+              <a href="#">Gift Tips</a>
+              <a href="#">Begginer's Guide</a>
+              <a href="#">Find your Skintype</a>
+              <a href="#">For Professionals</a>
+              <a href="#">Our Cruelty-Free policy</a>
+              <a href="#">Be our Ambassador</a>
+            </div>
+          </div>
+    
+          <!-- Logo -->
+          <div class="navitem logo">
+            <img class="logoIcon" src="../img/Neutral Elegant Minimalist Jewelry Logo.png" alt="Harmony Logo">
+          </div>
+    
+          <!-- Search Input -->
+          <div class="navitem search">
+            <input type="text" placeholder="Sök..." class="searchInput" />
+            <img src="../img/search-heart.svg" width="20" height="20" alt="Search Icon" class="searchIcon" />
+          </div>
+    
+          <!-- Checkout Buttons -->
+          <div class="navitem buttons">
+            <button class="checkoutButton basket">
+              <img src="../img/basket2.svg" alt="Basket Icon" class="buttonIcon" />
+            </button>
+            <button class="checkoutButton heart">
+              <img src="../img/arrow-through-heart-fill.svg" alt="Heart Icon" class="buttonIcon" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+     <div class="hero">
 
       <div class="heroimg1">
         <img src="/images/heroimg1.png" alt="KEUNE NEWS">
