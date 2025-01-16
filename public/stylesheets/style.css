@@ -4,6 +4,12 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.hero {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+  
 /* Navigation container */
 .navContainer {
   border: solid 2px #cb9483;  
@@ -277,8 +283,81 @@ body {
     padding-left: 5px;
     padding-right: 5px;
   }
+
 }
 
+.heroimg1 {
+  position: relative;
+}
+
+.heroimg1 img, .heroimg2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.herotitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px 10px rgba(60, 60, 60, 0.7); /* Mjuk svart skugga */
+  text-align: center;
+}
+
+.shop-now-button {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.shop-now-button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .heroimg2 {
+    display: none;
+  }
+
+  .herotitle {
+    top: 45%;
+    font-size: 1rem;
+  }
+
+  .shop-now-button {
+    top: 85%;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    gap: 18px;
+  }
+}
 
 /*-----Delivery and Safety with Icons------------*/
 .deliverySafety > ul {
