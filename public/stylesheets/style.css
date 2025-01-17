@@ -288,6 +288,7 @@ body {
 
 }
 
+/*----HERO----*/
 .heroimg1 {
   position: relative;
 }
@@ -361,7 +362,83 @@ body {
   }
 }
 
-/*-----Delivery and Safety with Icons------------*/
+/*-----POPULAR PRODUCTS------*/
+.popularProducts {
+  margin:20px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  padding:20px;
+  img{
+      margin-top:10px;
+      width: 100%;
+  }
+  a{
+    text-decoration: none;  
+      color: inherit;   
+    }
+  
+}
+.popularProducts-container
+{
+  margin:10px;
+}
+.popularProducts-container1 {
+  margin-bottom: 10px;
+  display: block;
+   gap: 15px;
+}
+
+ /*BESTSELLER badge*/
+ .bestsellerBadge-text{
+  background-color: hsl(211, 24%, 44%); /* Badge color */
+  color: white;              /* Text color */
+  padding: 3px 3px;       /* Padding for spacing */
+  border-radius: 30px;      /* Creates the oval shape */
+  font-size: 11px;          /* Font size */
+  text-align: center;        /* Center text */
+  box-shadow: 0 4px 8px rgba(196, 98, 98, 0.2); /*  Shadow */
+}
+/*Position for clothes*/
+.popularProducts-container{
+  position: relative /*To be able to change products captions layout*/
+ }
+
+
+.bestsellerBadge{ /*bestseller position*/
+  position: absolute; 
+  left: 20px;
+  top: 30px; 
+}
+
+
+.price { /*price position, size*/
+  
+  font-size: small;
+
+}
+.brand{ /*brand size, position*/
+  font-size: small;
+ 
+}
+
+@media (max-width: 1024px){
+  .bestsellerBadge{
+    display:none; 
+  }
+}
+
+@media (max-width: 768px){
+  .popularProducts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Prducts 2 items per colum */
+    gap: 16px;  
+    padding: 16px;  
+  }
+}
+
+
+/*-----ICONS FOR DELIVERY AND SAFETY------------*/
 .deliverySafety > ul {
   list-style: none;
   display:flex;

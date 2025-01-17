@@ -1,0 +1,53 @@
+const products = [
+    {
+        id: 1,
+        name: 'THAT EXTRA HYDRATION',
+        urlSlug: 'that-extra-hydration',
+        image: '/images/extra_hydrationCAIA.png',
+        price: '210 SEK',
+        brand: 'CAIA',
+        rating: '/images/rating.jpeg',
+        reviews: '856',
+        description: 'That Extra Hydration is a two-in-one setting and hydration spray that helps to set and melt makeup together into a seamless look. Whether used on a bare face or over makeup, it gives your skin an immediate hydration boost thanks to its infused antioxidant-rich extracts from prickly pear for a soothing feel. Bring it with you for a refreshing feel and elevate your look anytime, anywhere.',
+        ingredients: 'AQUA, PROPANEDIOL, PVP, ANASTATICA HIEROCHUNTICA EXTRACT, PHENOXYETHANOL, ETHYLHEXYLGLYCERIN, PARFUM, PPG-26-BUTETH-26, GLYCERIN, PEG-40 HYDROGENATED CASTOR OIL, XYLITYLGLUCOSIDE, ANHYDROXYLITOL, OPUNTIA FICUS-INDICA STEM EXTRACT, LACTOBACILLUS FERMENT, XYLITOL, GLUCOSE, CITRIC ACID, SODIUM HYDROXIDE, SODIUM BENZOATE, POTASSIUM SORBATE', 
+    },
+    {
+        id: 2,
+        name: 'THAT EXTRA HYDRATION',
+        urlSlug: 'that-extra-hydration',
+        image: '/images/extra_hydrationCAIA.png',
+        price: '210 SEK',
+        brand: 'CAIA',
+        rating: '/images/rating.jpeg',
+        reviews: '856',
+        description: 'That Extra Hydration is a two-in-one setting and hydration spray that helps to set and melt makeup together into a seamless look. Whether used on a bare face or over makeup, it gives your skin an immediate hydration boost thanks to its infused antioxidant-rich extracts from prickly pear for a soothing feel. Bring it with you for a refreshing feel and elevate your look anytime, anywhere.',
+        ingredients: 'AQUA, PROPANEDIOL, PVP, ANASTATICA HIEROCHUNTICA EXTRACT, PHENOXYETHANOL, ETHYLHEXYLGLYCERIN, PARFUM, PPG-26-BUTETH-26, GLYCERIN, PEG-40 HYDROGENATED CASTOR OIL, XYLITYLGLUCOSIDE, ANHYDROXYLITOL, OPUNTIA FICUS-INDICA STEM EXTRACT, LACTOBACILLUS FERMENT, XYLITOL, GLUCOSE, CITRIC ACID, SODIUM HYDROXIDE, SODIUM BENZOATE, POTASSIUM SORBATE', 
+      }, 
+      {
+        id: 3,
+        name: 'THAT EXTRA HYDRATION',
+        urlSlug: 'that-extra-hydration',
+        image: '/images/extra_hydrationCAIA.png',
+        price: '210 SEK',
+        brand: 'CAIA',
+        rating: '/images/rating.jpeg',
+        reviews: '856',
+        description: 'That Extra Hydration is a two-in-one setting and hydration spray that helps to set and melt makeup together into a seamless look. Whether used on a bare face or over makeup, it gives your skin an immediate hydration boost thanks to its infused antioxidant-rich extracts from prickly pear for a soothing feel. Bring it with you for a refreshing feel and elevate your look anytime, anywhere.',
+        ingredients: 'AQUA, PROPANEDIOL, PVP, ANASTATICA HIEROCHUNTICA EXTRACT, PHENOXYETHANOL, ETHYLHEXYLGLYCERIN, PARFUM, PPG-26-BUTETH-26, GLYCERIN, PEG-40 HYDROGENATED CASTOR OIL, XYLITYLGLUCOSIDE, ANHYDROXYLITOL, OPUNTIA FICUS-INDICA STEM EXTRACT, LACTOBACILLUS FERMENT, XYLITOL, GLUCOSE, CITRIC ACID, SODIUM HYDROXIDE, SODIUM BENZOATE, POTASSIUM SORBATE', 
+      },  
+      {
+        id: 4,
+        name: 'THAT EXTRA HYDRATION',
+        urlSlug: 'that-extra-hydration',
+        image: '/images/extra_hydrationCAIA.png',
+        price: '210 SEK',
+        brand: 'CAIA',
+        rating: '/images/rating.jpeg',
+        reviews: '856',
+        description: 'That Extra Hydration is a two-in-one setting and hydration spray that helps to set and melt makeup together into a seamless look. Whether used on a bare face or over makeup, it gives your skin an immediate hydration boost thanks to its infused antioxidant-rich extracts from prickly pear for a soothing feel. Bring it with you for a refreshing feel and elevate your look anytime, anywhere.',
+        ingredients: 'AQUA, PROPANEDIOL, PVP, ANASTATICA HIEROCHUNTICA EXTRACT, PHENOXYETHANOL, ETHYLHEXYLGLYCERIN, PARFUM, PPG-26-BUTETH-26, GLYCERIN, PEG-40 HYDROGENATED CASTOR OIL, XYLITYLGLUCOSIDE, ANHYDROXYLITOL, OPUNTIA FICUS-INDICA STEM EXTRACT, LACTOBACILLUS FERMENT, XYLITOL, GLUCOSE, CITRIC ACID, SODIUM HYDROXIDE, SODIUM BENZOATE, POTASSIUM SORBATE', 
+      },  
+
+];
+
+module.exports = products;
