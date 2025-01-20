@@ -365,6 +365,7 @@ body {
 /*-----POPULAR PRODUCTS------*/
 .popular-products-whole {
   background-color: rgb(255, 252, 240);
+  padding-right: 2%;
 }
 .popular-products-whole > h1{
   padding-top: 30px;
@@ -388,7 +389,6 @@ body {
  
 .popularProducts {
   margin:10px;
-  
   display: flex;
   flex-direction: row;
   padding:20px;
@@ -414,17 +414,17 @@ body {
  /*BESTSELLER badge*/
  .bestsellerBadge-text{
   display:block;
-  background-color: #ce8a99;/* Badge color */
-  color: white;              /* Text color */
-  padding: 3px 3px;       /* Padding for spacing */
-  border-radius: 30px;      /* Creates the oval shape */
-  font-size: 11px;          /* Font size */
-  text-align: center;        /* Center text */
+  background-color: #ce8a99;
+  color: white;              
+  padding: 3px 3px;       
+  border-radius: 30px;      
+  font-size: 11px;         
+  text-align: center;       
   box-shadow: 0 4px 8px rgba(196, 98, 98, 0.2); /*  Shadow */
 }
-/*Position for clothes*/
+
 .popularProducts-container{
-  position: relative /*To be able to change products captions layout*/
+  position: relative; /*To be able to change products captions layout*/
  }
 
 
@@ -456,12 +456,7 @@ body {
 }
 
 
-
-
 .buy-button {
-  /*position:absolute;
-  border-bottom:0%;
-  left:10%;*/
   transform: translate(-50%, -50%);
   padding: 10px 15px;
   font-size: 1rem;
@@ -480,6 +475,10 @@ body {
   background-color: black;
   color: white;
 }
+
+
+
+
 @media (max-width: 1024px){
   .bestsellerBadge{
     display:none; 
@@ -489,7 +488,7 @@ body {
 @media (max-width: 768px){
   .popularProducts{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* Prducts 2 items per colum */
+    grid-template-columns: repeat(3, 1fr);  
     gap: 16px;  
     padding: 16px;   
   }

@@ -4,6 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// sqlite
+const sqlite3 = require("sqlite3").verbose();
+const db = new Database('./db/products.db',{verbose: console.log});
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 

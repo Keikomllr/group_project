@@ -47,7 +47,6 @@ const products = [
         description: 'NYX Professional Makeup Epic Ink Liner is a liquid eyeliner that allows you to create perfect lines. It has a waterproof formula with an intense black shade, making it perfect for both everyday and party occasions, ideal for those with an active lifestyle! It comes with a thin tip that lets you apply your lines with precision. Whether you prefer thin, discreet or thick and eye-catching lines, Epic Ink Liner lets you create the perfect look for every occasion.',
         ingredients: 'Rosin/Colophonium/Colophane, Barium Sulfate (Ci 7712), Phenoxyethanol. May Contain / Peut Contenir (+/-): Mica, Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Red 7 (Ci 1585), Red 3, Microcrystalline Wax/Cera Microcristallina/Cire Microcristalline, Tocopherol, Ascorbyl Palmitate, Rosin/Colophonium/Colophane, Phenoxyethanol. May Contain / Peut Contenir (+/-): Mica, Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Blue 1 Lake (Ci 429), Red 7 (Ci 1585). ', 
       },  
-
 ];
 
 module.exports = products;

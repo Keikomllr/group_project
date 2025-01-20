@@ -72,43 +72,43 @@
 
      <!--POPULAR PRODUCTS-->   
     <article class="popular-products-whole">
-      <h1>Popular Products</h1>
-      
-      <a href="#" class="top-100">See Top 100</a>
-      <div class="popularProducts">
+      <h1>Popular Products</h1>  
+      <a href="#" class="top-100">See Top 100</a> 
+     <div class="popularProducts">
       <% products.forEach(product => { %> 
         <div class="popularProducts-container1">
-            <!--link to produktkort--> 
-          <a href="/products/<%= product.urlSlug %>"> 
-            <div class="popularProducts-container">     
-              <div class="product-container">                         
-                <img src="<%= product.image %>" alt="<%= product.name %>">
+              <!--link to produktkort--> 
+            <div href="/products/<%= product.urlSlug %>"> 
+              <div class="popularProducts-container">     
+                <div class="product-container">                         
+                  <img src="<%= product.image %>" alt="<%= product.name %>">
+                </div>
+                <div class="bestsellerBadge">
+                  <text class="bestsellerBadge-text">BESTSELLER</text> 
+                </div> 
+                <div class="product-texts">
+                  <div class="brand">
+                    <%= product.brand %>
+                  </div>
+                  <div class="name">
+                    <%= product.name %>
+                  </div>
+                  <div class="price">
+                    <%= product.price %>
+                    <span>kr</span> 
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    <a href="#" class="buy-button">BUY</a>
+                  </div>
+                </div> 
               </div>
-              <div class="bestsellerBadge">
-                <text class="bestsellerBadge-text">BESTSELLER</text> 
-              </div> 
-              <div class="product-texts">
-                <div class="brand">
-                  <%= product.brand %>
-                </div>
-                <div class="name">
-                  <%= product.name %>
-                </div>
-                <div class="price">
-                  <%= product.price %>
-                  <span>kr</span> 
-                </div>
-                <br>
-                <br>
-                <div>
-                  <a href="#" class="buy-button">BUY</a>
-                </div>
-              </div> 
             </div>
           </a>
         </div>
       <% }); %>
-      </div>
+     </div>
     </article>
 
     <!--Delivery and safety info with Icons-->
