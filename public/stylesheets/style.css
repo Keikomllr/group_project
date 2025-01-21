@@ -364,7 +364,6 @@ body {
 
 /*-----POPULAR PRODUCTS------*/
 .popular-products-whole {
-  background-color: rgb(255, 252, 240);
   padding-right: 2%;
 }
 .popular-products-whole > h1{
@@ -409,6 +408,10 @@ body {
   margin-bottom: 10px;
   display: block;
    gap: 15px;
+}
+
+.popularProducts-container1 img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
  /*BESTSELLER badge*/
