@@ -721,7 +721,8 @@ body {
 
   .video-container video {
     max-width: 100%; 
-=======
+  }
+}
 .banners {
   padding-top: 20px;
   padding-left: 20px;
