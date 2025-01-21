@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         brand: 'CAIA',
-        name: 'THAT EXTRA HYDRATION 100 ml',
+        name: 'HYDRATION 100 ml',
         urlSlug: 'that-extra-hydration-CAIA',
         image: '/images/extra_hydrationCAIA.png',
         price: '210',
@@ -14,7 +14,7 @@ const products = [
     {
         id: 2,
         brand: 'The Ordinary',
-        name: 'Glycolic Acid 7% Toner 240 ml',
+        name: 'Exfoliating Toner 7% ',
         urlSlug: 'Glycolic Acid 7% Exfoliating Toner 240 ml',
         image: '/images/tonerTHEORDINARY.png',
         price: '210',
@@ -26,7 +26,7 @@ const products = [
       {
         id: 3,
         brand: 'IsaDora',
-        name: 'The Bronzing Powder 43 Bronze',
+        name: 'Bronzing Powder 43',
         urlSlug: 'face-powderISADORA',
         image: '/images/face_powderISADORA.png',
         price: '189',
@@ -38,7 +38,7 @@ const products = [
       {
         id: 4,
         brand: 'NYX MAKE UP',
-        name: 'Waterproof Liquid Eyeliner Black',
+        name: 'Waterproof Eyeliner',
         urlSlug: 'eyeliner-black-NYX',
         image: '/images/eyelinerNYX.png',
         price: '210',
