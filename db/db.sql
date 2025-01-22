@@ -25,7 +25,7 @@ INSERT INTO products (
       ingredients
   )VALUES (
         'CAIA',
-        'THAT EXTRA HYDRATION 100 ml / 3,38 us fl. oz.',
+        'HYDRATION 100 ml',
         'that-extra-hydration-CAIA',
         '/images/extra_hydrationCAIA.png',
         '210',
@@ -39,7 +39,7 @@ INSERT INTO products (
   brand, name, urlSlug, image, price, rating, reviews, description, ingredients
 ) VALUES (
   'The Ordinary',
-  'Glycolic Acid 7% Exfoliating Toner 240 ml',
+  'Exfoliating Toner 7% ',
   'glycolic-acid-toner',
   '/images/tonerTHEORDINARY.png',
   '320',
@@ -53,7 +53,7 @@ INSERT INTO products (
   brand, name, urlSlug, image, price, rating, reviews, description, ingredients
 ) VALUES (
   'IsaDora',
-  'The Bronzing Powder 43 Terracotta Bronze',
+  'Bronzing Powder 43',
   'face-powderISADORA',
   '/images/face_powderISADORA.png',
   '189',
@@ -66,8 +66,8 @@ INSERT INTO products (
 INSERT INTO products (
   brand, name, urlSlug, image, price, rating, reviews, description, ingredients
 ) VALUES (
-  'NYX PROFESSIONAL MAKEUP',
-  'Waterproof Liquid Eyeliner Black',
+  'NYX MAKEUP',
+  'Waterproof Eyeliner',
   'eyeliner-black-NYX',
   '/images/eyelinerNYX.png',
   '235',
