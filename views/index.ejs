@@ -14,7 +14,8 @@
         <div class="navTop">
           <!-- Dropdown Button -->
           <div class="dropdown">
-            <button class="dropdownButton">☰</button> <!-- Hamburger Icon -->
+            <button class="dropdownButton">☰</button>
+            <!-- Hamburger Icon -->
             <div class="dropdownMenu">
               <a href="#">Perfumes</a>
               <a href="#">Skincare</a>
@@ -29,35 +30,52 @@
               <a href="#">Be our Ambassador</a>
             </div>
           </div>
-    
+
           <!-- Logo -->
           <div class="navitem logo">
-            <img class="logoIcon" src="../img/Neutral Elegant Minimalist Jewelry Logo.png" alt="Harmony Logo">
+            <img
+              class="logoIcon"
+              src="../img/Neutral Elegant Minimalist Jewelry Logo.png"
+              alt="Harmony Logo"
+            />
           </div>
-    
+
           <!-- Search Input -->
           <div class="navitem search">
             <input type="text" placeholder="Sök..." class="searchInput" />
-            <img src="../img/search-heart.svg" width="20" height="20" alt="Search Icon" class="searchIcon" />
+            <img
+              src="../img/search-heart.svg"
+              width="20"
+              height="20"
+              alt="Search Icon"
+              class="searchIcon"
+            />
           </div>
-    
+
           <!-- Checkout Buttons -->
           <div class="navitem buttons">
             <button class="checkoutButton basket">
-              <img src="../img/basket2.svg" alt="Basket Icon" class="buttonIcon" />
+              <img
+                src="../img/basket2.svg"
+                alt="Basket Icon"
+                class="buttonIcon"
+              />
             </button>
             <button class="checkoutButton heart">
-              <img src="../img/arrow-through-heart-fill.svg" alt="Heart Icon" class="buttonIcon" />
+              <img
+                src="../img/arrow-through-heart-fill.svg"
+                alt="Heart Icon"
+                class="buttonIcon"
+              />
             </button>
           </div>
         </div>
       </div>
     </nav>
-    
-     <div class="hero">
 
+    <div class="hero">
       <div class="heroimg1">
-        <img src="/images/heroimg1.png" alt="KEUNE NEWS">
+        <img src="/images/heroimg1.png" alt="KEUNE NEWS" />
         <div class="herotitle">
           <h1>KEUNE NEWS</h1>
         </div>
@@ -65,80 +83,72 @@
       </div>
 
       <div class="heroimg2">
-        <img src="/images/heroimg5.png" alt="SPRING NEWS">
+        <img src="/images/heroimg5.png" alt="SPRING NEWS" />
       </div>
-     
     </div>
-    
 
-      <!-- Add video section here -->
-   <section class="video-section">
-    <div class="video-container">
-      <video width="100%" height="auto" autoplay loop muted>
-        <source src="/video/Promo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <video width="100%" height="auto" autoplay loop muted>
-        <source src="/video/Promo2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
+    <!-- Add video section here -->
+    <section class="video-section">
+      <div class="video-container">
+        <video width="100%" height="auto" autoplay loop muted>
+          <source src="/video/Promo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video width="100%" height="auto" autoplay loop muted>
+          <source src="/video/Promo2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
 
     <div class="banners">
       <div class="bannerimg1">
         <picture>
-          <source srcset="/images/bannerimg1.png" media="(max-width: 768px)">
-          <img src="/images/bannerimg1big.png" alt="NEW LIPSTICK COLLECTION">
+          <source srcset="/images/bannerimg1.png" media="(max-width: 768px)" />
+          <img src="/images/bannerimg1big.png" alt="NEW LIPSTICK COLLECTION" />
         </picture>
       </div>
 
       <div class="bannerimg2">
-        <img src="/images/bannerimg2.png" alt="SPECIAL OFFER">
+        <img src="/images/bannerimg2.png" alt="SPECIAL OFFER" />
       </div>
     </div>
 
-     <!--POPULAR PRODUCTS-->   
+    <!--POPULAR PRODUCTS-->
     <article class="popular-products-whole">
-      <h1>Popular Products</h1>  
-      <a href="#" class="top-100">See Top 100</a> 
-     <div class="popularProducts">
-      <% products.forEach(product => { %> 
-        <div class="popularProducts-container1">
-              <!--link to produktkort--> 
-            <div href="/products/<%= product.urlSlug %>"> 
-              <div class="popularProducts-container">     
-                <div class="product-container">                         
-                  <img src="<%= product.image %>" alt="<%= product.name %>">
+      <h1>Popular Products</h1>
+      <a href="#" class="top-100">See Top 100</a>
+      <div class="popularProducts">
+        <% products.forEach(product => { %>
+          <div class="popularProducts-container1">
+            <!--link to produktkort-->
+            <a href="/products/<%= product.urlSlug %>">
+              <div class="popularProducts-container">
+                <div class="product-container">
+                  <img src="<%= product.image %>" alt="<%= product.name %>" />
                 </div>
                 <div class="bestsellerBadge">
-                  <text class="bestsellerBadge-text">BESTSELLER</text> 
-                </div> 
+                  <text class="bestsellerBadge-text">BESTSELLER</text>
+                </div>
                 <div class="product-texts">
-                  <div class="brand">
-                    <%= product.brand %>
-                  </div>
-                  <div class="name">
-                    <%= product.name %>
-                  </div>
+                  <div class="brand"><%= product.brand %></div>
+                  <div class="name"><%= product.name %></div>
                   <div class="price">
                     <%= product.price %>
-                    <span>kr</span> 
+                    <span>kr</span>
                   </div>
-                  <br>
-                  <br>
+                  <br />
+                  <br />
                   <div>
                     <a href="#" class="buy-button">BUY</a>
                   </div>
-                </div> 
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
-      <% }); %>
-     </div>
+            </a>
+          </div>
+        <% }) %>
+      </div>
     </article>
-  
 
     <section class="article-boxes">
       <div class="article-box">
@@ -158,22 +168,25 @@
       </div>
     </section>
 
-
     <!--Delivery and safety info with Icons-->
-    <section class="deliverySafety">                   
+    <section class="deliverySafety">
       <ul>
-        <li  class="deliverySafety_list">
-          <img src="../img/fast-delivery.png" width="70px" alt="fast-delivery">
-          <span class="deliverySafety_text">Express Delivery</span>
-        </li> 
         <li class="deliverySafety_list">
-          <img src="../img/global.png" width="60px" alt="global">
+          <img
+            src="../img/fast-delivery.png"
+            width="70px"
+            alt="fast-delivery"
+          />
+          <span class="deliverySafety_text">Express Delivery</span>
+        </li>
+        <li class="deliverySafety_list">
+          <img src="../img/global.png" width="60px" alt="global" />
           <span class="deliverySafety_text">Global Shipping</span>
-        </li> 
-        <li  class="deliverySafety_list">
-          <img src="../img/safety.png" width="60px" alt="safety">
-          <span  class="deliverySafety_text">Safe Payments</span>
-        </li> 
+        </li>
+        <li class="deliverySafety_list">
+          <img src="../img/safety.png" width="60px" alt="safety" />
+          <span class="deliverySafety_text">Safe Payments</span>
+        </li>
       </ul>
     </section>
 
@@ -181,7 +194,7 @@
     <footer>
       <!--Accordion Komponent-->
       <div class="accordion">
-        <div class="accordion-item" >
+        <div class="accordion-item">
           <button class="accordion-button">Customer service</button>
           <div class="accordion-content">
             <ul>
@@ -192,69 +205,93 @@
             </ul>
           </div>
         </div>
-          <div class="accordion-item">
-            <button class="accordion-button" >Information</button>
-            <div class="accordion-content">
-              <ul>
-                <a href="#" class="footerLink"><li>Privacy Notice</li></a>
-                <a href="#" class="footerLink"><li>About Harmony</li></a>
-                <a href="#" class="footerLink"><li>Return Policy</li></a>
-              </ul>
-            </div>
+        <div class="accordion-item">
+          <button class="accordion-button">Information</button>
+          <div class="accordion-content">
+            <ul>
+              <a href="#" class="footerLink"><li>Privacy Notice</li></a>
+              <a href="#" class="footerLink"><li>About Harmony</li></a>
+              <a href="#" class="footerLink"><li>Return Policy</li></a>
+            </ul>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-button" >News and offers</button>
-            <div class="accordion-content">
-              <ul>
-                <li>Join our customer club and sign up to receive our newsletters and SMS to make sure you don't miss any offers or promotions!</li>
-                <br>
-                <li>
-                  <input type="text" id="email" name="email" value="" placeholder="Email">
-                </li>
-                <li class="signUp-btn">  <!--SUBMIT-->
-                  <input type="submit" name="btn_confirm" value="SIGN UP">
-                </li>  
-              </ul>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button">News and offers</button>
+          <div class="accordion-content">
+            <ul>
+              <li>
+                Join our customer club and sign up to receive our newsletters
+                and SMS to make sure you don't miss any offers or promotions!
+              </li>
+              <br />
+              <li>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  value=""
+                  placeholder="Email"
+                />
+              </li>
+              <li class="signUp-btn">
+                <!--SUBMIT-->
+                <input type="submit" name="btn_confirm" value="SIGN UP" />
+              </li>
+            </ul>
           </div>
+        </div>
       </div>
       <!-- Social Media Links -->
-    <section class="social-media">
-      <h3>Follow us</h3>
-        <div class="social-media-items"> 
+      <section class="social-media">
+        <h3>Follow us</h3>
+        <div class="social-media-items">
           <div>
-            <a href="https://instagram.com/harmony" target="_blank"><img src="../img/instagram.png" alt="instagram" width="30" height="30" ></a>
+            <a href="https://instagram.com/harmony" target="_blank"
+              ><img
+                src="../img/instagram.png"
+                alt="instagram"
+                width="30"
+                height="30"
+            /></a>
           </div>
           <div>
-            <a href="https://x.com/harmony" target="_blank"><img src="../img/x.png" alt="x" width="30" height="30"></a>
+            <a href="https://x.com/harmony" target="_blank"
+              ><img src="../img/x.png" alt="x" width="30" height="30"
+            /></a>
           </div>
-          <div> 
-            <a href="https://facebook.com/harmony" target="_blank"><img src="../img/facebook.png" alt="facebook" width="30" height="30"></a>
+          <div>
+            <a href="https://facebook.com/harmony" target="_blank"
+              ><img
+                src="../img/facebook.png"
+                alt="facebook"
+                width="30"
+                height="30"
+            /></a>
           </div>
-        </div>  
-     </section>
-   <hr>
-    <!-- Copyright -->
+        </div>
+      </section>
+      <hr />
+      <!-- Copyright -->
       <section class="footer-bottom">
         <div class="copyright">
           <p>Copyright © 2025 Harmony. All rights reserved.</p>
-        </div>   
-        <div class="paymentMethod">
-          <img src="../img/visa.png" alt="visa">
         </div>
         <div class="paymentMethod">
-          <img src="../img/master.png" alt="master">
+          <img src="../img/visa.png" alt="visa" />
         </div>
         <div class="paymentMethod">
-          <img src="../img/paypal.png" alt="paypal">
+          <img src="../img/master.png" alt="master" />
         </div>
         <div class="paymentMethod">
-          <img src="../img/klarna.png" width="35px" alt="klarna">
+          <img src="../img/paypal.png" alt="paypal" />
         </div>
         <div class="paymentMethod">
-          <img src="../img/swish.jpg" width="40px" alt="swish">
+          <img src="../img/klarna.png" width="35px" alt="klarna" />
+        </div>
+        <div class="paymentMethod">
+          <img src="../img/swish.jpg" width="40px" alt="swish" />
         </div>
       </section>
-    </footer>  
+    </footer>
   </body>
 </html>
