@@ -4,8 +4,6 @@ var sqlite3 = require('sqlite3');
 var path = require('path');
 
 // Connect to the database
-// Initialize database connection
-// Initialize database connection
 const db = new sqlite3.Database(path.join(__dirname, "../products.db"), (err) => {
   if (err) {
     console.error("Database connection failed:", err.message);
@@ -28,7 +26,7 @@ router.get('/', function(req, res, next) {
      // Log the rows to see if data is being fetched
      console.log("Fetched products:", rows);
 
-    // Render .views/index.ejs with the fetched products
+    // Render .views index.ejs with the fetched products
     res.render("index", { title: 'Harmony by CMK', products: rows });
   });
 
