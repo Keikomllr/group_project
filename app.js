@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var checkoutRouter = require('./routes/checkout');
 // Import and use the products route
 const productsRouter = require("./routes/products");
+const productDetailsRouter = require('./routes/productdetails');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/products', productsRouter); //Import and use the products route
+app.use('/productdetails', productDetailsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
