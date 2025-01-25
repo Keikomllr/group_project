@@ -463,7 +463,7 @@ body {
 
 .buy-button {
   transform: translate(-50%, -50%);
-  padding: 10px 15px;
+  padding: 10px 55px;
   font-size: 1rem;
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: black;
@@ -773,3 +773,10 @@ body {
 
   }
 }
+
+/*--- PRODUCT DETAILS ---*/
+.product_details{
+  display: flex;
+  flex-direction: row;
+}
+ 
