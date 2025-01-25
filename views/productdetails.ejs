@@ -84,20 +84,30 @@
                     <img src="<%= product.image %>" alt="<%= product.name %>" />
                 </div>
                 <div class="detail_info">
-                    <h1><%= product.name %></h1>
-                    <h2>Description</h2>
+                    <div class="detail_brand">
+                        <h1><%= product.brand %></h1>
+                    </div>
+                    <div class="detail_name">
+                        <h3><%= product.name %></h3>
+                    </div>    
+                    <div>
+                        <img src="<%= product.rating %>" alt="rate">
+                        <span><%= product.reviews %> reviews</span>
+                    </div>
+                    <div class="detail_price">
+                        <span> <%= product.price %> kr</span>
+                    </div>
+                    <br><br>
+                    <div>
+                        <button class="buy-button_detail">BUY</button>
+                    </div>
+                    <br><br>
+                    <h4>Description</h4>
                     <div class="detail_description">
                         <%= product.description %>
                     </div>
-                    <h2>ingredients</h2>
-                    <div><%= product.ingredients %></div>    
-                    <div class="detail_price">
-                        <%= product.price %> <span>kr</span>
-                    </div>
-                    <br><br><br>
-                    <div>
-                        <button class="buy-button">Lägg i varukorg</button>
-                    </div>
+                    <h4>ingredients</h4>
+                    <div><%= product.ingredients %></div>        
                 </div>
             </div>
         </article>

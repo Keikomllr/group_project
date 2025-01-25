@@ -776,7 +776,44 @@ body {
 
 /*--- PRODUCT DETAILS ---*/
 .product_details{
+  padding: 10px;
   display: flex;
   flex-direction: row;
 }
- 
+.detail_name{
+  font-size: 1rem;
+}
+.detail_info{
+  position:relative;
+}
+.detail_brand{
+  font-size: 1.5rem;
+  font-weight:600;
+  color:#a4796a;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+  Verdana, sans-serif;
+}
+.detail_price{
+  font-size:1.5rem;
+}
+.buy-button_detail{
+  position:absolute;
+  left:70px;
+  transform: translate(-50%, -50%);
+  padding: 10px 55px;
+  font-size: 1rem;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buy-button_detail:hover {
+  background-color: white;
+  color: black;
+}
