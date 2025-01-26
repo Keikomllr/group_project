@@ -98,10 +98,17 @@
                         <span> <%= product.price %> kr</span>
                     </div>
                     <br><br>
+
+                    <!-- BUY BUTTON  -->
+                    <!--TODO :fix Button function-->
                     <div>
+                        <form method="post" action="/basket">
+                            <input type="hidden" name="productId" value="<%= product.id %>">
                         <button class="buy-button_detail">BUY</button>
-                        
+                        </form>
                     </div>
+
+
                     <div class="favorite">
                         <img src="/public/images/heart.png" alt="favorite"> <p>favorite</p>  <!--favorit icon-->
                     </div> 
