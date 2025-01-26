@@ -776,7 +776,8 @@ body {
 
 /*--- PRODUCT DETAILS ---*/
 .product_details{
-  padding: 10px;
+  padding: 20px;
+  padding-top:30px;
   display: flex;
   flex-direction: row;
 }
@@ -785,6 +786,7 @@ body {
 }
 .detail_info{
   position:relative;
+  padding-left: 20px;
 }
 .detail_brand{
   font-size: 1.5rem;
@@ -796,9 +798,12 @@ body {
 .detail_price{
   font-size:1.5rem;
 }
+.detail_pic{
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+}
 .buy-button_detail{
   position:absolute;
-  left:70px;
+  left:90px;
   transform: translate(-50%, -50%);
   padding: 10px 55px;
   font-size: 1rem;
