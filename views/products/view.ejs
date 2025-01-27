@@ -7,6 +7,7 @@
     <!--Store icon-->
     <link rel="icon" href="/images/harmony_icon.png" type="image/storeicon">
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/details.css">
     <script src="/stylesheets/javamain.js" defer></script>
     <script src="/stylesheets/footerAccordion.js" defer></script>
   </head>
@@ -75,50 +76,47 @@
             </div>
         </nav>
 
-        <!-- PRODUCT DETAIL -->
-        
-            
+        <!-- PRODUCT DETAIL -->    
         <article>
-            <div class="product_details">              
+            <div class="product_details_container">              
                 <div class="detail_pic">
                     <img src="<%= product.image %>" alt="<%= product.name %>" />
                 </div>
                 <div class="detail_info">
-                    <div class="detail_brand">
-                        <h1><%= product.brand %></h1>
-                    </div>
-                    <div class="detail_name">
-                        <h3><%= product.name %></h3>
-                    </div>    
-                    <div>
+                    
+                        <h1 class="detail_brand"><%= product.brand %></h1>                 
+                        <h3 class="detail_name"><%= product.name %></h3>
+                     
+                    <div class="detail_review">
                         <img src="<%= product.rating %>" alt="rate">
                         <span><%= product.reviews %> reviews</span>
                     </div>
                     <div class="detail_price">
                         <span> <%= product.price %> kr</span>
                     </div>
+                    <p class="detail_option">Free delivery option available from 200 kr, can be sent immediately</p>
                     <br><br>
 
                     <!-- BUY BUTTON  -->
                     <!--TODO :fix Button function-->
-                    <div>
-                        <form method="post" action="/basket">
-                            <input type="hidden" name="productId" value="<%= product.id %>">
-                        <button class="buy-button_detail">BUY</button>
-                        </form>
-                    </div>
-
-
-                    <div class="favorite">
-                        <img src="/public/images/heart.png" alt="favorite"> <p>favorite</p>  <!--favorit icon-->
-                    </div> 
-                    
+                    <div class="buy_fav_container">
+                        <div>
+                            <form method="post" action="/basket">
+                                <input type="hidden" name="productId" value="<%= product.id %>">
+                            <button class="buy-button_detail">BUY</button>
+                            </form>
+                        </div>
+                        <br><br>
+                        <div class="favorite_icon">
+                            <img src="../images/heart.png" alt="favorite" width="40px"> <span>favorite</span>  <!--favorit icon-->
+                        </div> 
+                    </div>                    
                     <br><br>
-                    <h4>Description</h4>
+                    <h3>DESCRIPTION</h3>
                     <div class="detail_description">
                         <%= product.description %>
                     </div>
-                    <h4>ingredients</h4>
+                    <h3>INGREDIENTS</h3>
                     <div><%= product.ingredients %></div>        
                 </div>
             </div>
