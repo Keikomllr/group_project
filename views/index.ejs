@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="/stylesheets/javamain.js" defer></script>
     <script src="/stylesheets/footerAccordion.js" defer></script>
+    <script src="/stylesheets/shuffleProducts.js" defer></script>
   </head>
   <body>
     <nav>
@@ -66,7 +67,7 @@
                     class="buttonIcon"/>
                 </button>
             </a>
-            <a href="http://localhost:3000/checkout">
+            <a href="http://localhost:3000/favorite">
                 <button class="checkoutButton heart">
                 <img
                     src="../img/arrow-through-heart-fill.svg"
@@ -128,7 +129,7 @@
         <% products.forEach(product => { %>
           <div class="popularProducts-container1">
             <!--link to produktkort, open by new tab-->
-            <a href="/productdetails/<%= product.urlSlug %>" target="_blank">
+            <a href="/productdetails/<%= product.urlSlug %>">
               <div class="popularProducts-container">
                 <div class="product-container">
                   <img src="<%= product.image %>" alt="<%= product.name %>" />

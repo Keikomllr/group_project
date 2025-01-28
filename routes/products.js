@@ -6,13 +6,13 @@ const router = express.Router();
 // Connect to the database
 // Initialize database connection
 const db = new sqlite3.Database(path.join(__dirname, "../products.db"), 
-/*(err) => {
+(err) => {
     if (err) {
       console.error("Database connection failed:", err.message);
     } else {
       console.log("Connected to the database: /products.db");
     }
-  } */
+  } 
     );
   
   
@@ -21,10 +21,10 @@ const db = new sqlite3.Database(path.join(__dirname, "../products.db"),
 router.get("/", (req, res) => {
   db.all("SELECT id, urlSlug, image, name, brand, price FROM products", [], 
     (err, rows) => {
-    /*if (err) {
+    if (err) {
       console.error(err.message);
       return res.status(500).send("Database query failed.");
-    }*/
+    }
 
      // Log the rows to see if data is being fetched
      console.log("Fetched products:", rows);
