@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harmony</title>
+    <title><%= title %></title>
+    <!--Store icon-->
+    <link rel="icon" href="/images/harmony_icon.png" type="image/storeicon">
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/details.css">
     <script src="/stylesheets/javamain.js" defer></script>
     <script src="/stylesheets/footerAccordion.js" defer></script>
   </head>
@@ -72,6 +75,91 @@
                 </div>
             </div>
         </nav>
+
+        <!-- PRODUCT DETAIL -->    
+        <article>
+            <div class="product_details_container">              
+                <div class="detail_pic">
+                    <img src="<%= product.image %>" alt="<%= product.name %>" />
+                </div>
+                <div class="detail_info">
+                    
+                        <h1 class="detail_brand"><%= product.brand %></h1>                 
+                        <h3 class="detail_name"><%= product.name %></h3>
+                     
+                    <div class="detail_review">
+                        <img src="<%= product.rating %>" alt="rate">
+                        <span><%= product.reviews %> reviews</span>
+                    </div>
+                    <div class="detail_price">
+                        <span> <%= product.price %> kr</span>
+                    </div>
+                    <p class="detail_option">Free delivery option available from 200 kr, can be sent immediately</p>
+                    <br><br>
+
+                    <!-- BUY BUTTON  -->
+                    <!--TODO :fix Button function-->
+                    <div class="buy_fav_container">
+                        <div>
+                            <form method="post" action="/basket">
+                                <input type="hidden" name="productId" value="<%= product.id %>">
+                            <button class="buy-button_detail">BUY</button>
+                            </form>
+                        </div>
+                        <br><br>
+                        <div class="favorite_icon">
+                            <img src="../images/heart.png" alt="favorite" width="40px"> <span>favorite</span>  <!--favorit icon-->
+                        </div> 
+                    </div>                    
+                    <br><br>
+                    <h3>DESCRIPTION</h3>
+                    <div class="detail_description">
+                        <%= product.description %>
+                    </div>
+                    <h3>INGREDIENTS</h3>
+                    <div><%= product.ingredients %></div>        
+                </div>
+            </div>
+        </article>
+            
+
+
+
+        <!--POPULAR PRODUCTS-->
+        <article class="popular-products-whole">
+            <h1>YOU MAY ALSO LIKE</h1>
+            <div class="popularProducts">
+            <% products.forEach(product => { %>
+                <div class="popularProducts-container1">
+                <!--link to produktkort-->
+                <a href="/productdetails/<%= product.urlSlug %>">
+                    <div class="popularProducts-container">
+                    <div class="product-container">
+                        <img src="<%= product.image %>" alt="<%= product.name %>" />
+                    </div>
+                    <div class="bestsellerBadge">
+                        <text class="bestsellerBadge-text">BESTSELLER</text>
+                    </div>
+                    <div class="product-texts">
+                        <div class="brand"><%= product.brand %></div>
+                        <div class="name"><%= product.name %></div>
+                        <div class="price">
+                        <%= product.price %>
+                        <span>kr</span>
+                        </div>
+                        <br />
+                        <br />
+                        <div>
+                        <a href="#" class="buy-button">BUY</a>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+            <% }) %>
+            </div>
+        </article>
+
 
         <!--Delivery and safety info with Icons-->
         <section class="deliverySafety">

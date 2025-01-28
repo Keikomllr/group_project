@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 
   // TODO: Hämta produkterna från databasen
 
-  db.all("SELECT id, image, name, brand, price FROM products", [], (err, rows) => {
+  db.all("SELECT id, urlSlug, image, name, brand, price FROM products", [], (err, rows) => {
     if (err) {
       console.error(err.message);
       return res.status(500).send("Database query failed.");
