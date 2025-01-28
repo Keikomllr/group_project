@@ -45,8 +45,8 @@ header h1 {
 }
 
 .basket-table th {
-    background-color: #E5C7A9; /* Soft Sand */
-    color: #6B4F4F; /* Deep Espresso */
+    background-color: #E5C7A9; 
+    color: #6B4F4F; 
     font-weight: bold;
     border: none;
     text-transform: uppercase;
@@ -55,25 +55,25 @@ header h1 {
 
 .basket-table td {
     border-bottom: 1px solid #ddd;
-    color: #4A4A4A; /* Charcoal Gray */
+    color: #4A4A4A; 
 }
 
 .basket-table tbody tr:nth-child(odd) {
-    background-color: #F4EDE4; /* Light cream for contrast */
+    background-color: #F4EDE4; 
 }
 
 .basket-table tbody tr:nth-child(even) {
-    background-color: #FFFFFF; /* White for alternating rows */
+    background-color: #FFFFFF; 
 }
 
 .basket-table tbody tr:hover {
-    background-color: #F2D7C9; /* Subtle dusty rose hover */
+    background-color: #F2D7C9; 
     transition: background-color 0.2s ease-in-out;
 }
 
 /* Total Row Styling */
 tfoot {
-    background-color: #FAF3EB; /* Matches the page background */
+    background-color: #FAF3EB; 
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -81,12 +81,12 @@ tfoot {
 tfoot .total-label {
     text-align: right;
     padding-right: 15px;
-    color: #6B4F4F; /* Deep Espresso */
+    color: #6B4F4F; 
 }
 
 tfoot .total-value {
     text-align: right;
-    color: #D65A31; /* Terracotta for emphasis */
+    color: #D65A31; 
     font-weight: bold;
 }
 
@@ -102,14 +102,47 @@ tfoot .total-value {
     }
 }
 
-/* Checkout Button Styling */
+/* Checkout Container */
 .checkout-container {
-    text-align: right;
+    display: flex;
+    justify-content: space-between; /* Spread buttons/icons apart */
+    gap: 15px; /* Space between the buttons/icons */
     margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center; /* Center align items vertically */
 }
 
+/* Redirect to Homepage Button Styling */
+.redirect-to-home-container {
+    display: flex;
+    justify-content: flex-start; /* Align the button to the left */
+    align-items: center; /* Vertically center it with other items */
+    margin-right: auto; /* Push the "Go to Homepage" button to the left */
+}
+
+.redirect-home-button {
+    background-color: #1E90FF; /* Green background */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover and click effects */
+}
+
+.redirect-home-button:hover {
+    background-color: #007BFF; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.redirect-home-button:active {
+    transform: scale(0.98); /* Slight shrink effect when clicked */
+}
+
+/* Checkout Button Styling */
 .checkout-button {
-    background-color: #A8D5BA; /* Terracotta for a warm call-to-action */
+    background-color: #A8D5BA;
     color: #fff;
     border: none;
     padding: 12px 24px;
@@ -120,5 +153,28 @@ tfoot .total-value {
 }
 
 .checkout-button:hover {
-    background-color: #8FBC8F; /* Darker terracotta on hover */
+    background-color: #8FBC8F;
 }
+
+/* Empty Basket Icon Styling */
+.empty-basket-icon-container {
+    margin-top: 7px;
+}
+
+.empty-basket-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.trash-can-icon {
+    width: 27px;
+    height: 27px;
+    transition: transform 0.3s ease;
+}
+
+.empty-basket-icon:hover .trash-can-icon {
+    transform: rotate(5deg) scale(1.2); /* Slight rotation and scaling on hover */
+}
+

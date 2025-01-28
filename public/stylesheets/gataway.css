@@ -79,6 +79,21 @@ form .btn:hover {
     background: #A2B85C;
 }
 
+/* Button for going to the homepage */
+.redirect-homepage-button .btn {
+    background-color: #1E90FF; 
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.redirect-homepage-button .btn:hover {
+    background-color: #007BFF;
+}
+
 /* Payment Options Image Styling */
 .payO {
     height: 33px;

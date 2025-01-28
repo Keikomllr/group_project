@@ -15,9 +15,9 @@
             <table class="basket-table">
                 <thead>
                     <tr>
-                        <th>Produkt</th>
-                        <th>Antal</th>
-                        <th>Pris</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                         <th>Total</th>
                     </tr>
                 </thead>
@@ -33,7 +33,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3" class="total-label">Total Summa:</td>
+                        <td colspan="3" class="total-label">Total Amount:</td>
                         <td class="total-value">
                             <%= basket.reduce((sum, item) => sum + (item.product.price * item.quantity), 0).toFixed(2) %> kr
                         </td>
@@ -41,11 +41,27 @@
                 </tfoot>
             </table>
             
-            <!-- Checkout Button -->
             <div class="checkout-container">
+                <!-- Redirect to Homepage Button -->
+                <div class="redirect-to-home-container">
+                    <form action="/" method="GET" class="redirect-home-form">
+                        <button type="submit" class="redirect-home-button">Go Back</button>
+                    </form>
+                </div>
+            
+                <!-- Checkout Button -->
                 <form action="/checkout" method="GET">
-                    <button type="submit" class="checkout-button">Gå till Kassan</button>
+                    <button type="submit" class="checkout-button">Checkout</button>
                 </form>
+            
+                <!-- Empty Basket Icon (SVG Image) -->
+                <div class="empty-basket-icon-container">
+                    <form action="/basket/clear" method="POST" class="empty-basket-form">
+                        <button type="submit" class="empty-basket-icon" title="Empty Basket">
+                            <img src="/img/trash3.svg" alt="Empty Basket" class="trash-can-icon" width="24" height="24">
+                        </button>
+                    </form>
+                </div>
             </div>
         </main>
     </div>
