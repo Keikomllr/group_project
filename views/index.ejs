@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harmony</title>
+    <title><%= title %></title>
+    <!--Store icon-->
+    <link rel="icon" href="/images/harmony_icon.png" type="image/storeicon">
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="/stylesheets/javamain.js" defer></script>
     <script src="/stylesheets/footerAccordion.js" defer></script>
@@ -121,8 +123,8 @@
       <div class="popularProducts">
         <% products.forEach(product => { %>
           <div class="popularProducts-container1">
-            <!--link to produktkort-->
-            <a href="/products/<%= product.urlSlug %>">
+            <!--link to produktkort, open by new tab-->
+            <a href="/productdetails/<%= product.urlSlug %>" target="_blank">
               <div class="popularProducts-container">
                 <div class="product-container">
                   <img src="<%= product.image %>" alt="<%= product.name %>" />
@@ -137,11 +139,13 @@
                     <%= product.price %>
                     <span>kr</span>
                   </div>
-                  <br />
-                  <br />
+                  <br><br>
+
+                  <!-- TODO :Function for buy button -->
                   <div>
                     <a href="#" class="buy-button">BUY</a>
                   </div>
+                  
                 </div>
               </div>
             </a>

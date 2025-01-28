@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <!--Store icon-->
+    <link rel="icon" href="/images/harmony_icon.png" type="image/storeicon">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/details.css">
+    <script src="/stylesheets/javamain.js" defer></script>
+    <script src="/stylesheets/footerAccordion.js" defer></script>
+  </head>
+    <body>
+        <nav>
+            <div class="navContainer">
+                <div class="navTop">
+                <!-- Dropdown Button -->
+                <div class="dropdown">
+                    <button class="dropdownButton">☰</button>
+                    <!-- Hamburger Icon -->
+                    <div class="dropdownMenu">
+                    <a href="#">Perfumes</a>
+                    <a href="#">Skincare</a>
+                    <a href="#">Hair Products</a>
+                    <a href="#">K-Beauty Products</a>
+                    <a href="#">Men's Grooming</a>
+                    <a href="#">Gift Tips</a>
+                    <a href="#">Begginer's Guide</a>
+                    <a href="#">Find your Skintype</a>
+                    <a href="#">For Professionals</a>
+                    <a href="#">Our Cruelty-Free policy</a>
+                    <a href="#">Be our Ambassador</a>
+                    </div>
+                </div>
+
+                <!-- Logo -->
+                <div class="navitem logo">
+                    <img
+                    class="logoIcon"
+                    src="../img/Neutral Elegant Minimalist Jewelry Logo.png"
+                    alt="Harmony Logo"
+                    />
+                </div>
+
+                <!-- Search Input -->
+                <div class="navitem search">
+                    <input type="text" placeholder="Sök..." class="searchInput" />
+                    <img
+                    src="../img/search-heart.svg"
+                    width="20"
+                    height="20"
+                    alt="Search Icon"
+                    class="searchIcon"
+                    />
+                </div>
+
+                <!-- Checkout Buttons -->
+                <div class="navitem buttons">
+                    <button class="checkoutButton basket">
+                    <img
+                        src="../img/basket2.svg"
+                        alt="Basket Icon"
+                        class="buttonIcon"
+                    />
+                    </button>
+                    <button class="checkoutButton heart">
+                    <img
+                        src="../img/arrow-through-heart-fill.svg"
+                        alt="Heart Icon"
+                        class="buttonIcon"
+                    />
+                    </button>
+                </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- PRODUCT DETAIL -->    
+        <article>
+            <div class="product_details_container">              
+                <div class="detail_pic">
+                    <img src="<%= product.image %>" alt="<%= product.name %>" />
+                </div>
+                <div class="detail_info">
+                    
+                        <h1 class="detail_brand"><%= product.brand %></h1>                 
+                        <h3 class="detail_name"><%= product.name %></h3>
+                     
+                    <div class="detail_review">
+                        <img src="<%= product.rating %>" alt="rate">
+                        <span><%= product.reviews %> reviews</span>
+                    </div>
+                    <div class="detail_price">
+                        <span> <%= product.price %> kr</span>
+                    </div>
+                    <p class="detail_option">Free delivery option available from 200 kr, can be sent immediately</p>
+                    <br><br>
+
+                    <!-- BUY BUTTON  -->
+                    <!--TODO :fix Button function-->
+                    <div class="buy_fav_container">
+                        <div>
+                            <form method="post" action="/basket">
+                                <input type="hidden" name="productId" value="<%= product.id %>">
+                            <button class="buy-button_detail">BUY</button>
+                            </form>
+                        </div>
+                        <br><br>
+                        <div class="favorite_icon">
+                            <img src="../images/heart.png" alt="favorite" width="40px"> <span>favorite</span>  <!--favorit icon-->
+                        </div> 
+                    </div>                    
+                    <br><br>
+                    <h3>DESCRIPTION</h3>
+                    <div class="detail_description">
+                        <%= product.description %>
+                    </div>
+                    <h3>INGREDIENTS</h3>
+                    <div><%= product.ingredients %></div>        
+                </div>
+            </div>
+        </article>
+            
+
+
+
+        <!--POPULAR PRODUCTS-->
+        <article class="popular-products-whole">
+            <h1>YOU MAY ALSO LIKE</h1>
+            <div class="popularProducts">
+            <% products.forEach(product => { %>
+                <div class="popularProducts-container1">
+                <!--link to produktkort-->
+                <a href="/productdetails/<%= product.urlSlug %>">
+                    <div class="popularProducts-container">
+                    <div class="product-container">
+                        <img src="<%= product.image %>" alt="<%= product.name %>" />
+                    </div>
+                    <div class="bestsellerBadge">
+                        <text class="bestsellerBadge-text">BESTSELLER</text>
+                    </div>
+                    <div class="product-texts">
+                        <div class="brand"><%= product.brand %></div>
+                        <div class="name"><%= product.name %></div>
+                        <div class="price">
+                        <%= product.price %>
+                        <span>kr</span>
+                        </div>
+                        <br />
+                        <br />
+                        <div>
+                        <a href="#" class="buy-button">BUY</a>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </div>
+            <% }) %>
+            </div>
+        </article>
+
+
+        <!--Delivery and safety info with Icons-->
+        <section class="deliverySafety">
+            <ul>
+            <li class="deliverySafety_list">
+                <img
+                src="../img/fast-delivery.png"
+                width="70px"
+                alt="fast-delivery"
+                />
+                <span class="deliverySafety_text">Express Delivery</span>
+            </li>
+            <li class="deliverySafety_list">
+                <img src="../img/global.png" width="60px" alt="global" />
+                <span class="deliverySafety_text">Global Shipping</span>
+            </li>
+            <li class="deliverySafety_list">
+                <img src="../img/safety.png" width="60px" alt="safety" />
+                <span class="deliverySafety_text">Safe Payments</span>
+            </li>
+            </ul>
+        </section>
+    
+        <!--FOOTER-->
+        <footer>
+            <!--Accordion Komponent-->
+            <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">Customer service</button>
+                <div class="accordion-content">
+                <ul>
+                    <a href="#" class="footerLink"><li>Contact us</li></a>
+                    <a href="#" class="footerLink"><li>Express Delivery</li></a>
+                    <a href="#" class="footerLink"><li>My page</li></a>
+                    <a href="#" class="footerLink"><li>Harmony Privacy Policy</li></a>
+                </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Information</button>
+                <div class="accordion-content">
+                <ul>
+                    <a href="#" class="footerLink"><li>Privacy Notice</li></a>
+                    <a href="#" class="footerLink"><li>About Harmony</li></a>
+                    <a href="#" class="footerLink"><li>Return Policy</li></a>
+                </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">News and offers</button>
+                <div class="accordion-content">
+                <ul>
+                    <li>
+                    Join our customer club and sign up to receive our newsletters
+                    and SMS to make sure you don't miss any offers or promotions!
+                    </li>
+                    <br />
+                    <li>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        value=""
+                        placeholder="Email"
+                    />
+                    </li>
+                    <li class="signUp-btn">
+                    <!--SUBMIT-->
+                    <input type="submit" name="btn_confirm" value="SIGN UP" />
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </div>
+            <!-- Social Media Links -->
+            <section class="social-media">
+            <h3>Follow us</h3>
+            <div class="social-media-items">
+                <div>
+                <a href="https://instagram.com/harmony" target="_blank"
+                    ><img
+                    src="../img/instagram.png"
+                    alt="instagram"
+                    width="30"
+                    height="30"
+                /></a>
+                </div>
+                <div>
+                <a href="https://x.com/harmony" target="_blank"
+                    ><img src="../img/x.png" alt="x" width="30" height="30"
+                /></a>
+                </div>
+                <div>
+                <a href="https://facebook.com/harmony" target="_blank"
+                    ><img
+                    src="../img/facebook.png"
+                    alt="facebook"
+                    width="30"
+                    height="30"
+                /></a>
+                </div>
+            </div>
+            </section>
+            <hr />
+            <!-- Copyright -->
+            <section class="footer-bottom">
+            <div class="copyright">
+                <p>Copyright © 2025 Harmony. All rights reserved.</p>
+            </div>
+            <div class="paymentMethod">
+                <img src="../img/visa.png" alt="visa" />
+            </div>
+            <div class="paymentMethod">
+                <img src="../img/master.png" alt="master" />
+            </div>
+            <div class="paymentMethod">
+                <img src="../img/paypal.png" alt="paypal" />
+            </div>
+            <div class="paymentMethod">
+                <img src="../img/klarna.png" width="35px" alt="klarna" />
+            </div>
+            <div class="paymentMethod">
+                <img src="../img/swish.jpg" width="40px" alt="swish" />
+            </div>
+            </section>
+        </footer>
+    </body>
+</html>
