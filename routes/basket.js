@@ -20,7 +20,7 @@ router.get("/", function (req, res) {
     let basket = req.session.basket ?? [];
 
     res.render("basket", {
-        title: "Shopping Cart",
+        title: "Shopping Basket",
         basket,
     });
 });
