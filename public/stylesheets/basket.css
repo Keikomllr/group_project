@@ -1,0 +1,124 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3EB; /* Soft, creamy white */
+    color: #4A4A4A; /* Charcoal Gray */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Basket Container */
+.basket-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #FFFFFF; /* Pure white for contrast */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Header Styling */
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #6B8E23; /* Terracotta */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Table Styling */
+.basket-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.basket-table th, .basket-table td {
+    text-align: left;
+    padding: 15px;
+}
+
+.basket-table th {
+    background-color: #E5C7A9; /* Soft Sand */
+    color: #6B4F4F; /* Deep Espresso */
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.basket-table td {
+    border-bottom: 1px solid #ddd;
+    color: #4A4A4A; /* Charcoal Gray */
+}
+
+.basket-table tbody tr:nth-child(odd) {
+    background-color: #F4EDE4; /* Light cream for contrast */
+}
+
+.basket-table tbody tr:nth-child(even) {
+    background-color: #FFFFFF; /* White for alternating rows */
+}
+
+.basket-table tbody tr:hover {
+    background-color: #F2D7C9; /* Subtle dusty rose hover */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Total Row Styling */
+tfoot {
+    background-color: #FAF3EB; /* Matches the page background */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+tfoot .total-label {
+    text-align: right;
+    padding-right: 15px;
+    color: #6B4F4F; /* Deep Espresso */
+}
+
+tfoot .total-value {
+    text-align: right;
+    color: #D65A31; /* Terracotta for emphasis */
+    font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .basket-container {
+        padding: 15px;
+    }
+
+    .basket-table th, .basket-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Checkout Button Styling */
+.checkout-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    background-color: #A8D5BA; /* Terracotta for a warm call-to-action */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #8FBC8F; /* Darker terracotta on hover */
+}
