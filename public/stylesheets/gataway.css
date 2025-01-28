@@ -1,8 +1,9 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -10,7 +11,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #1f242d;
+    background: #F6F1E1;
     padding: 25px;
 }
 
@@ -26,18 +27,19 @@ form .row {
     gap: 15px;
     flex-wrap: wrap;
 }
-    
+
 .column .title {
     font-size: 20px;
-    color: #333;
-    text-transform: uppercase;
+    color: #cb9483; /* Earthy Green */
+    margin-bottom: 15px;
 }
 
 .row .column {
     flex: 1 1 250px;
 }
 
-.column .input-box {
+/* Input and Flex styling */
+.input-box {
     margin: 15px 0;
 }
 
@@ -47,25 +49,22 @@ form .row {
 }
 
 .input-box input {
-width: 100%;
-padding: 10px 15px;
-border: 1px solid #ccc;
-border-radius: 6px;
-font-size: 15px;
-}
-
-.column .flex {
-    display: flex;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
 }
 
 .flex .input-box {
     margin-top: 5px;
 }
 
+/* Submit Button */
 form .btn {
     width: 100%;
     padding: 12px;
-    background: #8175d3;
+    background: #8A9A5B;
     border: none;
     outline: none;
     border-radius: 6px;
@@ -77,9 +76,10 @@ form .btn {
 }
 
 form .btn:hover {
-    background: #6a5acd;
+    background: #A2B85C;
 }
 
+/* Payment Options Image Styling */
 .payO {
     height: 33px;
     width: 33px;
@@ -95,4 +95,69 @@ form .btn:hover {
 
 a {
     text-decoration: none;
+}
+
+/* Delivery Options Section */
+h3.title {
+    font-size: 20px;
+    color: #6B8E23; /* Earthy Green */
+    margin-bottom: 15px;
+}
+
+/* Delivery option cards */
+.delivery-option {
+    margin-bottom: 20px;
+}
+
+.delivery-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 2px solid #A8C2A5; /* Soft Sage Green border */
+    border-radius: 10px;
+    background-color: #F4F9F2; /* Light greenish background */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin: 10px 0;
+}
+
+.delivery-card input[type="radio"] {
+    display: none; /* Hide the radio button */
+}
+
+.delivery-card input[type="radio"]:checked + .delivery-content {
+    border: 2px solid #6B8E23; /* Earthy Green border on selection */
+    background-color: #D8E2D5; /* Lighter green background on selection */
+}
+
+.delivery-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Content inside the delivery card */
+.delivery-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4A4A4A; /* Charcoal Gray text */
+}
+
+.delivery-content img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.delivery-content span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Change the text color on selection */
+.delivery-card input[type="radio"]:checked + .delivery-content span {
+    color: #6B8E23; /* Highlight text color */
+    margin-right: 2px;
 }

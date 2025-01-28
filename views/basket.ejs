@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/basket.css">
+</head>
+<body>
+    <div class="basket-container">
+        <header>
+            <h1><%= title %></h1>
+        </header>
+        <main>
+            <table class="basket-table">
+                <thead>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Antal</th>
+                        <th>Pris</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% basket.forEach(basketItem => { %>
+                        <tr>
+                            <td><%= basketItem.product.name %></td>
+                            <td><%= basketItem.quantity %></td>
+                            <td><%= basketItem.product.price %> kr</td>
+                            <td><%= (basketItem.product.price * basketItem.quantity).toFixed(2) %> kr</td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="total-label">Total Summa:</td>
+                        <td class="total-value">
+                            <%= basket.reduce((sum, item) => sum + (item.product.price * item.quantity), 0).toFixed(2) %> kr
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <!-- Checkout Button -->
+            <div class="checkout-container">
+                <form action="/checkout" method="GET">
+                    <button type="submit" class="checkout-button">Gå till Kassan</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

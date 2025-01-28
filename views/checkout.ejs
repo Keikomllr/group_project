@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Gataway</title>
+    <title>Payment Gateway</title>
     <link rel="stylesheet" href="/stylesheets/gataway.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <form action="">
         <div class="row">
             <div class="column">
-                <h3 class="tittle">Billing Address</h3>
+                <h3 class="title">Billing Address</h3>
                 <div class="input-box">
                     <span>Full Name : </span>
                     <input type="text" placeholder="Type your full name">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="column">
-                <h3 class="tittle">Payment</h3>
+                <h3 class="title">Payment</h3>
                 <div class="input-box">
                     <span>Payment Options: </span>
                     <a href="#" target="_blank">
@@ -64,7 +64,7 @@
                     <input type="text" placeholder="Mr. Example Example">
                 </div>
                 <div class="input-box">
-                    <span>Credid Card Number : </span>
+                    <span>Credit Card Number : </span>
                     <input type="number" placeholder="1111-2222-3333-4444">
                 </div>
                 <div class="input-box">
@@ -83,6 +83,39 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Delivery Options Section -->
+        <div class="column">
+            <h3 class="title">Delivery Options</h3>
+            <div class="delivery-option">
+                <label class="delivery-card">
+                    <input type="radio" name="delivery" value="express" class="delivery-radio">
+                    <div class="delivery-content">
+                        <img src="/img/fast-delivery.png" alt="Express Delivery">
+                        <span>Express Delivery: 1-2 working days </span>
+                    </div>
+                </label>
+            </div>
+            <div class="delivery-option">
+                <label class="delivery-card">
+                    <input type="radio" name="delivery" value="standard" class="delivery-radio" checked>
+                    <div class="delivery-content">
+                        <img src="/img/slowtruck.svg" alt="Standard Delivery">
+                        <span>Standard Delivery: 3-5 working days</span>
+                    </div>
+                </label>
+            </div>
+            <div class="delivery-option">
+                <label class="delivery-card">
+                    <input type="radio" name="delivery" value="home" class="delivery-radio">
+                    <div class="delivery-content">
+                        <img src="/img/house-check.svg" alt="Home Delivery">
+                        <span>Home Delivery: 2-3 working days</span>
+                    </div>
+                </label>
+            </div>
+        </div>
+        
         <button type="submit" class="btn">Submit</button>
     </form>
    </div>
