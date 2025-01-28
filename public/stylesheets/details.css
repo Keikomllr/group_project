@@ -22,9 +22,12 @@ body{
     width:50%;
     max-width: 100%;
     object-fit: cover;
-    img{
-   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-    }
+  }
+
+  .detail_pic img {
+    width: 100%; 
+    height: auto;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
   }
 
   .detail_name{
@@ -76,6 +79,19 @@ body{
     position:absolute;
     left: 180px;
     bottom:15px;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .favorite_icon img {
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+
+  .favorite_icon img:hover {
+    transform: scale(1.2);
   }
   
   .favorite_icon span{
@@ -116,29 +132,34 @@ body{
   
     .detail_info {
       text-align: center; /* 中央寄せ */
-      margin-top: 20px;
     }
   
     .buy-button_detail{
-      position:absolute;
-      left:200px;
+      position: absolute;
+      left: 200px;
     }
-    .detail_pic{
-      padding-right: 250px;
+
+    .detail_pic {
+      width: 80%;
     }
+
     .detail_review{
-      padding-bottom:50px;
-      span{
-      
-        padding-left: 27px;
-      }
+      position: static;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
     }
+
+    .detail_review span {
+      position: static;
+      font-size: 1rem;
+      vertical-align: 15px;
+    }
+
     .favorite_icon{
       position:absolute;
-      left: 320px;
-      
+      left: 290px;
     }
-    
-  }
+}
   
   
