@@ -14,13 +14,27 @@ const db = new sqlite3.Database(path.join(__dirname, "../products.db"),
     }
   } 
     );
-  
+
+    
+
+    // ----SHUFFLE FUNCTION----
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
   
 
 // Define the route for the home page
 router.get("/", (req, res) => {
   db.all("SELECT id, urlSlug, image, name, brand, price FROM products", [], 
     (err, rows) => {
+
+      // Shuffle the products
+      shuffleArray(rows);
+
     if (err) {
       console.error(err.message);
       return res.status(500).send("Database query failed.");
