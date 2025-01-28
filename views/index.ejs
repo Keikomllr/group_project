@@ -59,22 +59,22 @@
           <!-- Checkout Buttons -->
           <div class="navitem buttons">
             <a href="http://localhost:3000/basket">
-              <button class="checkoutButton basket">
+                <button class="checkoutButton basket">
                 <img
-                  src="../img/basket2.svg"
-                  alt="Basket Icon"
-                  class="buttonIcon"
-                />
-              </button>
+                    src="../img/basket2.svg"
+                    alt="Basket Icon"
+                    class="buttonIcon"/>
+                </button>
             </a>
-            <button class="checkoutButton heart">
-              <img
-                src="../img/arrow-through-heart-fill.svg"
-                alt="Heart Icon"
-                class="buttonIcon"
-              />
-            </button>
-          </div>
+            <a href="http://localhost:3000/checkout">
+                <button class="checkoutButton heart">
+                <img
+                    src="../img/arrow-through-heart-fill.svg"
+                    alt="Heart Icon"
+                    class="buttonIcon"/>
+                </button>
+            </a>                   
+        </div>
         </div>
       </div>
     </nav>
@@ -143,13 +143,16 @@
                     <%= product.price %>
                     <span>kr</span>
                   </div>
-                  <br><br>
-
-                  <!-- TODO :Function for buy button -->
-                  <div>
-                    <a href="#" class="buy-button">BUY</a>
-                  </div>
+                
                   
+                  <!-- BUY BUTTON  -->
+                  <!-- TODO :Function for buy button -->
+                  <div class="buy-button_container">
+                    <form method="post" action="/basket">
+                      <input type="hidden" name="productId" value="<%= product.id %>">
+                      <button class="buy-button">BUY</button>
+                    </form>
+                  </div>                  
                 </div>
               </div>
             </a>
@@ -239,11 +242,12 @@
                   name="email"
                   value=""
                   placeholder="Email"
+                  width="50px;"
                 />
               </li>
-              <li class="signUp-btn">
+              <li>
                 <!--SUBMIT-->
-                <input type="submit" name="btn_confirm" value="SIGN UP" />
+                <button class="signUp-btn" role="button">SIGN UP</button>
               </li>
             </ul>
           </div>

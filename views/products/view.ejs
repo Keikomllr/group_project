@@ -64,19 +64,18 @@
                         <img
                             src="../img/basket2.svg"
                             alt="Basket Icon"
-                            class="buttonIcon"
-                        />
-                    </button>
+                            class="buttonIcon"/>
+                        </button>
                     </a>
-                    <button class="checkoutButton heart">
-                    <img
-                        src="../img/arrow-through-heart-fill.svg"
-                        alt="Heart Icon"
-                        class="buttonIcon"
-                    />
-                    </button>
-                   
-                </div>
+                    <a href="http://localhost:3000/checkout">
+                        <button class="checkoutButton heart">
+                        <img
+                            src="../img/arrow-through-heart-fill.svg"
+                            alt="Heart Icon"
+                            class="buttonIcon"/>
+                        </button>
+                    </a>                   
+                </div>       
                 </div>
             </div>
         </nav>
@@ -108,7 +107,7 @@
                         <div>
                             <form method="post" action="/basket">
                                 <input type="hidden" name="productId" value="<%= product.id %>">
-                            <button class="buy-button_detail">BUY</button>
+                                <button class="buy-button_detail">BUY</button>
                             </form>
                         </div>
                         <br><br>
@@ -152,11 +151,12 @@
                         <%= product.price %>
                         <span>kr</span>
                         </div>
-                        <br />
-                        <br />
-                        <div>
-                        <a href="#" class="buy-button">BUY</a>
-                        </div>
+                        <div class="buy-button_container">
+                            <form method="post" action="/basket">
+                              <input type="hidden" name="productId" value="<%= product.id %>">
+                              <button class="buy-button">BUY</button>
+                            </form>
+                        </div>   
                     </div>
                     </div>
                 </a>
