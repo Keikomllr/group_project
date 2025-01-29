@@ -12,12 +12,25 @@ const db = new sqlite3.Database(path.join(__dirname, "../products.db"), (err) =>
   }
 });
 
+
+
+// ----SHUFFLE FUNCTION----
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
   // TODO: Hämta produkterna från databasen
 
   db.all("SELECT id, urlSlug, image, name, brand, price FROM products", [], (err, rows) => {
+    
     if (err) {
       console.error(err.message);
       return res.status(500).send("Database query failed.");
@@ -25,6 +38,11 @@ router.get('/', function(req, res, next) {
 
      // Log the rows to see if data is being fetched
      console.log("Fetched products:", rows);
+
+
+    // Shuffle the products
+    shuffleArray(rows);
+
 
     // Render .views index.ejs with the fetched products
     res.render("index", { title: 'Harmony by CMK', products: rows });

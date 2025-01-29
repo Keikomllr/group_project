@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="/stylesheets/javamain.js" defer></script>
     <script src="/stylesheets/footerAccordion.js" defer></script>
+    <script src="/stylesheets/shuffleProducts.js" defer></script>
   </head>
   <body>
     <nav>
@@ -35,11 +36,13 @@
 
           <!-- Logo -->
           <div class="navitem logo">
-            <img
-              class="logoIcon"
-              src="../img/Neutral Elegant Minimalist Jewelry Logo.png"
-              alt="Harmony Logo"
-            />
+            <a href="/">
+              <img
+                class="logoIcon"
+                src="../img/Neutral Elegant Minimalist Jewelry Logo.png"
+                alt="Harmony Logo"
+              />
+            </a>
           </div>
 
           <!-- Search Input -->
@@ -55,8 +58,7 @@
           </div>
 
           <!-- Checkout Buttons -->
-          <div class="navitem buttons">
-            
+          <div class="navitem buttons"> 
             <!-- Basket Button with Link -->
           <a href="/basket">
               <button class="checkoutButton basket">
@@ -128,7 +130,7 @@
         <% products.forEach(product => { %>
           <div class="popularProducts-container1">
             <!--link to produktkort, open by new tab-->
-            <a href="/productdetails/<%= product.urlSlug %>" target="_blank">
+            <a href="/productdetails/<%= product.urlSlug %>">
               <div class="popularProducts-container">
                 <div class="product-container">
                   <img src="<%= product.image %>" alt="<%= product.name %>" />
@@ -143,13 +145,16 @@
                     <%= product.price %>
                     <span>kr</span>
                   </div>
-                  <br><br>
-
-                  <!-- TODO :Function for buy button -->
-                  <div>
-                    <a href="#" class="buy-button">BUY</a>
-                  </div>
+                
                   
+                  <!-- BUY BUTTON  -->
+                  <!-- TODO :Function for buy button -->
+                  <div class="buy-button_container">
+                    <form method="post" action="/basket">
+                      <input type="hidden" name="productId" value="<%= product.id %>">
+                      <button class="buy-button">BUY</button>
+                    </form>
+                  </div>                  
                 </div>
               </div>
             </a>
@@ -239,11 +244,12 @@
                   name="email"
                   value=""
                   placeholder="Email"
+                  width="50px;"
                 />
               </li>
-              <li class="signUp-btn">
+              <li>
                 <!--SUBMIT-->
-                <input type="submit" name="btn_confirm" value="SIGN UP" />
+                <button class="signUp-btn" role="button">SIGN UP</button>
               </li>
             </ul>
           </div>

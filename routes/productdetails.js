@@ -8,6 +8,18 @@ var path = require('path');
 const db = new sqlite3.Database(path.join(__dirname, "../products.db"), 
 );
 
+
+
+// ----SHUFFLE FUNCTION----
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+
+
 // GET /productdetails/:urlSlug (t.ex. /productdetails/eyeliner-NYX)
 router.get('/:urlSlug', function (req, res) {
   const urlSlug = req.params.urlSlug;
@@ -19,6 +31,10 @@ router.get('/:urlSlug', function (req, res) {
       // Get all products info and use for "Reccomended products"
       db.all(`SELECT * FROM products`, [], (err, products) => {
        
+       // Shuffle the products
+       shuffleArray(products);
+
+    
       // Render the template with product data
       res.render('products/view', {
         title: product.name,

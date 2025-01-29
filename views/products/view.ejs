@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/stylesheets/details.css">
     <script src="/stylesheets/javamain.js" defer></script>
     <script src="/stylesheets/footerAccordion.js" defer></script>
+    <script src="/stylesheets/shuffleProducts.js" defer></script>
   </head>
     <body>
         <nav>
@@ -36,11 +37,13 @@
 
                 <!-- Logo -->
                 <div class="navitem logo">
-                    <img
-                    class="logoIcon"
-                    src="../img/Neutral Elegant Minimalist Jewelry Logo.png"
-                    alt="Harmony Logo"
-                    />
+                    <a href="/">
+                        <img
+                        class="logoIcon"
+                        src="../img/Neutral Elegant Minimalist Jewelry Logo.png"
+                        alt="Harmony Logo"
+                        />
+                    </a>
                 </div>
 
                 <!-- Search Input -->
@@ -106,7 +109,7 @@
                         <div>
                             <form method="post" action="/basket">
                                 <input type="hidden" name="productId" value="<%= product.id %>">
-                            <button class="buy-button_detail">BUY</button>
+                                <button class="buy-button_detail">BUY</button>
                             </form>
                         </div>
                         <br><br>
@@ -150,11 +153,12 @@
                         <%= product.price %>
                         <span>kr</span>
                         </div>
-                        <br />
-                        <br />
-                        <div>
-                        <a href="#" class="buy-button">BUY</a>
-                        </div>
+                        <div class="buy-button_container">
+                            <form method="post" action="/basket">
+                              <input type="hidden" name="productId" value="<%= product.id %>">
+                              <button class="buy-button">BUY</button>
+                            </form>
+                        </div>   
                     </div>
                     </div>
                 </a>
