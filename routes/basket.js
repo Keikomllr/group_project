@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
+const path = require("path");
+const dbPath = path.join(__dirname, "../products.db");
 
 const sqlite3 = require("sqlite3").verbose(); // Correct usage for sqlite3.verbose()
 
 // Initialize the database connection
-const db = new sqlite3.Database("../products.db", (err) => {
+const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error("Error opening database:", err.message);
     } else {
@@ -12,12 +14,13 @@ const db = new sqlite3.Database("../products.db", (err) => {
     }
 });
 
+
 // GET route
 router.get("/", function (req, res) {
     let basket = req.session.basket ?? [];
 
     res.render("basket", {
-        title: "Varukorgen",
+        title: "Shopping Basket",
         basket,
     });
 });
@@ -27,7 +30,7 @@ router.post("/", function (req, res) {
     const productId = req.body.productId;
 
     let basket = req.session.basket ?? [];
-    let basketItem = basket.find(x => x.productId == productId);
+    let basketItem = basket.find(x => x.product.id == productId);
 
     if (basketItem) {
         basketItem.quantity += 1;
@@ -61,6 +64,13 @@ router.post("/", function (req, res) {
     }
 
     res.redirect("back");
+});
+
+
+// POST route to clear the basket
+router.post("/clear", function (req, res) {
+    req.session.basket = []; // Clear the basket by resetting it to an empty array
+    res.redirect("/basket"); // Redirect back to the basket page
 });
 
 module.exports = router;
