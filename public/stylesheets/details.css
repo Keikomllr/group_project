@@ -103,12 +103,13 @@ body{
   .buy-button_detail{
     position:absolute;
     left:90px;
+    margin-top: 5px;
     transform: translate(-50%, -50%);
     padding: 10px 55px;
     font-size: 1rem;
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;
@@ -118,8 +119,8 @@ body{
   }
   
   .buy-button_detail:hover {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
   }
 
 
